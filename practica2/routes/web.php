@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return View::make('pages.home');
+});
+
+Route::get('/nuevo-comic', function(){
+
+   return View::make('pages.nuevo-comic');
+
 });
