@@ -10156,6 +10156,11 @@ header {
   margin: auto;
   padding-top: 20px;
 }
+.wrapper_menu_items p.ttL_ {
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bold;
+}
 .wrapper_menu_items ul {
   padding: 0;
   list-style: none;
@@ -10238,6 +10243,7 @@ header {
 
 .carousel-control-prev, .carousel-control-next {
   opacity: 1;
+  width: 20px;
 }
 
 .footer {
@@ -10270,4 +10276,33 @@ header {
 
 .margin_top_comics {
   margin-top: 20px;
+}
+
+.wrapper_icons {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.w-img-comic-view {
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+.btn_comic_gallery {
+  display: block;
+  margin: auto;
+  background-color: transparent;
+  color: black;
+}
+
+.close_modal {
+  position: absolute;
+  right: -34px;
+  opacity: 1;
+  text-shadow: none;
+  font-size: 2em;
+  color: white;
 }

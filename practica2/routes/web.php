@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ComicsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', 'ComicsController@index');
 
-Route::get('/', function () {
-    return View::make('pages.home');
-});
+Route::get('/nuevo-comic', 'ComicsController@create');
 
-Route::get('/nuevo-comic', function(){
+Route::post('/nuevo-comic', 'ComicsController@store');
 
-   return View::make('pages.nuevo-comic');
+Route::get('/show/{id}', 'ComicsController@show');
 
-});
+Route::get('/show/{id}/edit', 'ComicsController@edit');
+
+Route::post('/show/{id}/edit', 'ComicsController@update');
+
+Route::get('/show/{id}/delete', 'ComicsController@destroy');
+

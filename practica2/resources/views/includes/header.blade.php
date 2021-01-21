@@ -19,7 +19,7 @@
             <div id="menu_white_am" class="menu_white in-left">
 
                <div class="wrapper_menu_items">
-               <p>COMIC WEB READER</p>
+               <p class="ttL_">COMIC WEB READER</p>
                 <a href="/"><img class="app_logo" src="{{url('/images/mix-log@2x.png')}}" alt=""></a>
 
                 <ul>

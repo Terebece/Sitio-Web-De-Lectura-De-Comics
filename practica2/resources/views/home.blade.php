@@ -1,23 +1,75 @@
-@extends('layouts.app')
+@extends('layouts.default')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+<!-- breadcrumb -->
+<div class="black_breadcrumb pd_30">
+    <p class="m-0">Read comics online in high quality. Free download high quality comics.</p>
+</div>
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
+<div class="banner_container">
+    <div class="w-content">
+        <img class="main_banner" src="{{url('/images/copia2-banner@2x.png')}}" alt="">
     </div>
 </div>
-@endsection
+
+
+<div class="d-flex-jasc w-content cards_user_dir">
+    <div class="card custom_card">
+        <p>Regístrate y <br>
+            crea un usuario</p>
+    </div>
+    <div class="card custom_card">
+        <p>Sube tus cómics en <br>
+            cualquier formato <br>
+            (.cbr file, .cbz, .pdf, etc..)</p>
+    </div>
+    <div class="card custom_card">
+        <p>Disfruta y comparte <br>
+            sin instalar programas</p>
+    </div>
+</div>
+
+<div class="w-content">
+    <img class="w-100 mt_110" src="{{url('/images/marvel-home-banner@2x.png')}}" alt="">
+    <br>
+    <h1 class="big_ttl">¡Lo más nuevo!</h1>
+    <br>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-inner">
+        
+            <div class="carousel-item active">
+                <div class="row">
+                @foreach($comics as $comic)
+                    <div class="col-md-3"><a href="/show/{{$comic->id}}"><img class="cover_comic" src="/images/{{$comic->ruta_imagen}}"
+                                alt=""></a></div>
+                @endforeach
+                </div>
+        
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                @foreach($comics as $comic)
+                    <div class="col-md-3"><a href="/show/{{$comic->id}}"><img class="cover_comic" src="/images/{{$comic->ruta_imagen}}"
+                                alt=""></a></div>
+                @endforeach
+                </div>
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <br>
+    
+</div>
+
+
+@stop
