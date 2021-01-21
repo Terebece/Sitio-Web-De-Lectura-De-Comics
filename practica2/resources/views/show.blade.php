@@ -19,7 +19,7 @@
 
             <a href="/show/{{$comic->id}}/edit" class="btn btn-info">Editar</a> 
                  
-            <a href="/show/{{$comic->id}}/delete" class="btn btn-danger">Eliminar</button>
+            <a href="/show/{{$comic->id}}/delete" class="btn btn-danger">Eliminar</a>
             
         </div>
         
